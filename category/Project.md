@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Project/공공빅데이터 공모전
+title: Project/Project1
 permalink: '/Project/Project1'
 ---
 
