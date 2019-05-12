@@ -6,13 +6,19 @@ categories: [Development Environment/Java]
 tags: [Java]
 ---
 
-# BaseBall 게임
+<br>
+
+# <center> BaseBall 게임 </center>
+---
+
+<br>
 
 * __배열 활용__
 * __랜덤수__
 
+<br>
 
-```{.java}
+```java
 public static void main(String[] args) {
 
 		// 숫자 야구게임
@@ -65,6 +71,5 @@ public static void main(String[] args) {
 			System.out.println();
 		}
 	}
-
 
 ```

@@ -6,19 +6,33 @@ categories: [Development Environment/Java]
 tags: [Java]
 ---
 
-# class를 이용한 계산기 / class 배열
+<br>
+
+# <center> class를 이용한 계산기 / class 배열 </center>
+---
+
+<br>
 
 * __class를 이용한 캡슐화__
 * __private 멤버변수 접근법__
 * __do~while 활용__
 * __배열을 활용한 클래스__
 
+<br>
+
 ## 1. Class 1
+
+<br>
+
 ### 1.1 class 설계
+
+<br>
+
 > 접근성 설정 위해 class 멤버변수는 private로 설정
 > private로 설정된 멤버변수에 접근하기 위한 settter 메서드
 > 계산기의 각 기능을 하는 메서드들
-```{.java}
+
+```java
 public class CalculatorTest {
 
 
@@ -69,14 +83,17 @@ public class CalculatorTest {
 	public int getNum2() {
 		return num2;
 	}
+}
 ```
 
-
+<br>
 
 ### 1.2  main code
 > do~while문 활용
 
-```{.java}
+<br>
+
+```java
 import java.util.*;
 public class CalculatorTest_Main {
 
@@ -108,14 +125,19 @@ public class CalculatorTest_Main {
 		Scanner input_contin = new Scanner(System.in);
 		contin = input_contin.nextLine().charAt(0);
 		}while ( contin == 'Y' | contin =='y');
+	}
+}
 ```
 
 <br>
 
 ## 2. 배열을 활용한 class
+
+<br>
+
 > 배열선언과 클래스 객체 선언을 각각 해줘야함에 주의
 > 만약, 반복문에 의해 만들어진 s[0],[s1],[s2]의 값을 계속 저장하고 싶다면?
-```{.java}
+```java
 public class Main {
 
 	public static void main(String[] args) {

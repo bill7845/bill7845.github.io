@@ -197,7 +197,7 @@ public static void main(String[] args) {
 
 <br>
 
-##2. 정렬(버블정렬)
+## 2. 정렬(버블정렬)
 
 <br>
 

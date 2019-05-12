@@ -6,16 +6,26 @@ categories: [Development Environment/Java]
 tags: [Java]
 ---
 
-# try catch 예외처리
+<br>
+
+# <center> try catch 예외처리 </center>
+---
+
+<br>
 
 * __오류와 예외__
 * __Try Catch__
-* __3__
+
+<br>
 
 ## 1 에러와 예외
+
+<br>
+
 > error => 심각한 오류
 > except => 심각하지 않은 오류
-```{.java}
+
+```java
 	try{
 		//예외 발생 구문
 	}catch(){
@@ -24,8 +34,12 @@ tags: [Java]
 	 	// 예외 발생 여부 상관없이  무조건 실행 구문
 		}
 ```
-> 사용예시
-```{.java}
+
+<br>
+
+_사용예시_
+
+```java
 String str[]= {"맛점","우산","즐거운 화요일"};
 
 		try{
@@ -44,10 +58,13 @@ String str[]= {"맛점","우산","즐거운 화요일"};
 		}
 ```
 
+<br>
 
 ## 2. 범용 예외 처리
 
-```{.java}
+<br>
+
+```java
 // java에서는 외부프로그램 시 무조건 예외처리
 
 		FileInputStream  fis = null; //변수 선언 바깥에서
@@ -72,9 +89,15 @@ String str[]= {"맛점","우산","즐거운 화요일"};
 	}
 ```
 
+<br>
+
 ## 3. throws Exception
+
+<br>
+
 >메서드의 예외를 메인으로 반환
-```{.java}
+
+```java
 //		readFile(); //메서드만 호출할 경우 메서드에서 발생한 예외 처리 못해서 아래처럼 try/catch 해줌
 
 		try{

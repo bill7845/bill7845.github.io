@@ -6,14 +6,24 @@ categories: [Development Environment/Java]
 tags: [Java]
 ---
 
-# 반복문
+<br>
+
+# <center> 반복문 </center>
+---
+
+<br>
 
 * __for 기본 예제__
 
+<br>
 
 ## 1. for 예제
+
+<br>
+
 > 문장 입력받은 후 거꾸로 출력
-```{.java}
+
+```java
 Scanner input = new Scanner(System.in);
 System.out.println("문장입력 :");
 
