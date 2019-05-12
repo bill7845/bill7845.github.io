@@ -7,7 +7,8 @@ tags: [Java]
 ---
 <br>
 
-# Reference 형변환
+# <center> Reference </center>
+---
 <br>
 * __UpCasting__
 * __DownCasting__
@@ -16,6 +17,8 @@ tags: [Java]
 
 _레퍼런스 형 변환_
 > 상속,인터페이스 부모 자식간에 레퍼런스 타입의 형변환
+
+<br>
 
 ## 1. UpCasting
 >부모는 자식객체의 멤버에 접근할 수 없었지만 Upcasting을 통해 부모의 객체로 자식 객체의 멤버를 사용할 수 있게 됨 __단, 부모가 갖고 있는 멤버 한정__
