@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] DataType
+title: Java DataType
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]
