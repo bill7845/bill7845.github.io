@@ -20,9 +20,6 @@ tags: [Java]
 
 ## 1. 배열 선언과 초기화
 > 배열의 선언
-
-<br>
-
 ```
   int []arr = new int[5];  // int타입 배열의 선언  // 배열의 크기는 미리 선언해 두지 않아도 무방
 ```
@@ -78,9 +75,11 @@ public static void main(String[] args) {
 
 <br>
 
-> __추가__
+__추가__
 > class를 활용한 성적합산 업그레이드
+
 ```java
+
 public class Student {
 
 	private String name; // 접근성을 위한 private 지정, setter 생성
@@ -123,12 +122,11 @@ public class Student {
 	public void setMath(int math) {
 		this.math = math;
 	}
+}
 
-//end of class
-//=====================================================
+// import java.util.Scanner;
+// import java.util.StringTokenizer;
 
-import java.util.Scanner;
-import java.util.StringTokenizer;
 public class Main {
 
 	public static void main(String[] args) {
@@ -171,6 +169,7 @@ public class Main {
 			System.out.println(s[i].toString());
 		}
 	}
+}
 ```
 
 <br>
@@ -192,6 +191,7 @@ public static void main(String[] args) {
     }
   }System.out.println(max);
 }
+
 ```
 
 <br>
@@ -202,6 +202,7 @@ public static void main(String[] args) {
 
 > 버블정렬 알고리즘을 활용하여 배열값 정렬 시키기
 > 동적 배열 활용한 합계 출력
+
 ```java
 public static void main(String[] args) {
 
@@ -224,6 +225,7 @@ public static void main(String[] args) {
 		}
 	}
 ```
+
 <br>
 
 ## 3. 동적배열
@@ -258,4 +260,5 @@ int a[][] = new int[][] { { 3, -5, 12 }, { -2, 11, 2, -7 }, { 21, -21, -35, -93,
 				sum+= a[i][j];
 			}System.out.println(sum);
 		}
+
 ```
