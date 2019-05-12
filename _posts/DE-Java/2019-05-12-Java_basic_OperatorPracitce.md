@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] 연산자
+title: Basic_연산자
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

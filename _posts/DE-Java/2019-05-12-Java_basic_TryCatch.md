@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] 예외처리
+title: Basic_예외처리
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

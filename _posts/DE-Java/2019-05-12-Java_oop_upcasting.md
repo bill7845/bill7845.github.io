@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [oop] Reference 형변환
+title: oop_Reference 형변환
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

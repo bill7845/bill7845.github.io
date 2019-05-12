@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [oop] 변수
+title: oop_변수
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

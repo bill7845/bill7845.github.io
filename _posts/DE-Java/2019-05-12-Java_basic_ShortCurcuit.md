@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] ShortCurcit&삼항연산자
+title: Basic_ShortCurcit&삼항연산자
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

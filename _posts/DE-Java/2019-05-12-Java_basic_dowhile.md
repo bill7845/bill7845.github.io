@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] DoWhile
+title: Basic_DoWhile
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

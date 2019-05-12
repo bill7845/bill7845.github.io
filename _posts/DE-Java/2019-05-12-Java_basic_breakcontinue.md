@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] break & continue
+title: Basic_break & continue
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

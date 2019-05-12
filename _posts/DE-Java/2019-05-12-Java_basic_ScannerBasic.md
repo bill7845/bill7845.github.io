@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] Scanner
+title: Basic_Scanner
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

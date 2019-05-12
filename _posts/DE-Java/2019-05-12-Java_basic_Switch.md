@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [basic] Switch
+title: Basic_Switch
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]
