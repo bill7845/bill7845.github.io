@@ -124,8 +124,8 @@ public class Student {
 	}
 }
 
-// import java.util.Scanner;
-// import java.util.StringTokenizer;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
 
@@ -176,6 +176,7 @@ public class Main {
 
 > 배열에서 가장 큰 값 구하기
 > 알고리즘
+
 ```java
 public static void main(String[] args) {
 
@@ -229,8 +230,12 @@ public static void main(String[] args) {
 <br>
 
 ## 3. 동적배열
+
+<br>
+
 > 배열이름.length와 배열이름[i].length의 차이를 구별
-```{.java}
+
+```java
 char[][] star = new char[4][]; // 동적 배열 선언
 
 		// 값 지정
