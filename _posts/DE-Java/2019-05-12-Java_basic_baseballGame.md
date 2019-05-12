@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java BaseBallGame
+title: [basic] BaseBallGame
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

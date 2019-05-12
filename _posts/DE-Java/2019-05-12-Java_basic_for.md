@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 반복분
+title: [basic] 반복분
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java Switch
+title: [basic] Switch
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

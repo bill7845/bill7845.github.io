@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 상속
+title: [oop] 상속
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

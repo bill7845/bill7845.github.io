@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java Class
+title: [oop] Class
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

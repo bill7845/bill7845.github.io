@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 클래스를이용한 계산기/class배열
+title: [basic] 클래스를이용한 계산기/class배열
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

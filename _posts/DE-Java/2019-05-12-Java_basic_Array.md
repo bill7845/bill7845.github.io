@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java Array
+title: [basic] Array
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 인스턴스 멤버와 This
+title: [oop] 인스턴스 멤버와 This
 comments: true
 categories: [Development Environment/Java]
 tags: [Java]
