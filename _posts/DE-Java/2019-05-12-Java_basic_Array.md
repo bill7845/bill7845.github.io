@@ -9,7 +9,9 @@ tags: [Java]
 
 # <center> Array </center>
 ---
+
 <br>
+
 * __Array basic__
 * __정렬(버블정렬)__
 * __동적배열__
@@ -18,24 +20,32 @@ tags: [Java]
 
 ## 1. 배열 선언과 초기화
 > 배열의 선언
+
+<br>
+
 ```
   int []arr = new int[5];  // int타입 배열의 선언  // 배열의 크기는 미리 선언해 두지 않아도 무방
 ```
 ```
   int []arr = new int{1,2,3,4,5}; // 배열의 선언과 초기화를 동시에
 ```
+
 <br>
+
 ### 1.1 배열의 크기와 기본값
 > 배열의 크기를 선언하고 값을 입력하지 않는것은 문제가 되지 않지만 배열의 크기를 넘어서는 값 입력은 불가능하다
 ```
   int []arr2 = new int[5];
   arr2 = {1,2,3,4,5,6}; // int형 5 크기의 배열에 값 6개 입력은 불가능
 ```
+
 <br>
+
 ### 1.2 배열을 활용한 기본예제
-> 배열을 활용한 성적 합산<br>
-> 입력받은 점수를 배열에 저장한 후 합산<br>
+> 배열을 활용한 성적 합산
+> 입력받은 점수를 배열에 저장한 후 합산
 > 배열에서 값을 하나씩 꺼내오는 방법
+
 ```java
 public static void main(String[] args) {
 
@@ -64,9 +74,11 @@ public static void main(String[] args) {
   }
 
 }
-<br>
 ```
-> __추가__  <br>
+
+<br>
+
+> __추가__
 > class를 활용한 성적합산 업그레이드
 ```java
 public class Student {
@@ -165,7 +177,6 @@ public class Main {
 
 > 배열에서 가장 큰 값 구하기
 > 알고리즘
-
 ```java
 public static void main(String[] args) {
 
@@ -182,15 +193,15 @@ public static void main(String[] args) {
   }System.out.println(max);
 }
 ```
+
 <br>
 
-##  2. 정렬(버블정렬)
+##2. 정렬(버블정렬)
 
 <br>
 
 > 버블정렬 알고리즘을 활용하여 배열값 정렬 시키기
 > 동적 배열 활용한 합계 출력
-
 ```java
 public static void main(String[] args) {
 
