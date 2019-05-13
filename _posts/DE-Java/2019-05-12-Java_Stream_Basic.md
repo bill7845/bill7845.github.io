@@ -27,10 +27,37 @@ _stream이란 자료의 입출력을 도와주는 중간 통로이다_
 
 <br>
 
-![ex_screenshot](./assets/img/byteStream.png)
+![byteStream](./assets/img/byteStream.png)
+![stringStream](./assets/img/byteStream.png)
 
 <br>
 
 1. 데이터를 생석 혹은 지정한다
 2. 데이터에 맞는 스트림을 생성한다
 3. 스트림 클래스의 메서드를 이용하여 데이터를 핸들링 한다
+
+```java
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class OutputTestFirst
+{
+	public static void main( String args[] )
+	{
+		try // stream 예외처리 필수
+		{
+			FileOutputStream fos = new FileOutputStream("a.txt");	// 출력스트림, byte 스트림
+
+			for( int ch = 'A'; ch <='Z'; ch++)
+			{
+				fos.write(ch);
+			}
+
+			fos.close();	// Stream Close
+
+		}catch( IOException ex ){
+			System.out.println("파일전송실패 :" + ex.toString() );
+		}
+	}
+}
+```
