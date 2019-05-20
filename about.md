@@ -26,6 +26,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <p>이 블로그는 스터디 자료,코드 공유,프로젝트 결과물 게시를 위해 만든 블로그 입니다 </p>
 
 </center>
+
 <br>
 
 ---------------------------
@@ -43,7 +44,9 @@ feature-img: "assets/img/sample_feature_img_2.png"
  <p class="text"> * Database : ORACEL, MYSQL</p>
 
 <br>
+
  ---------------------------
+
 <br>
 
 <center>
@@ -55,6 +58,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
    <p class="text"> Data Analytics, Data Visualization, Business Analytics, Branding Strategy </p>
 
 ---------------------------
+
 <br>
 
 <center>
@@ -69,6 +73,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
   <p class="text">2017.4~현재    플레이데이터<br> 파이썬 기반 빅데이터 엔지니어 전문가 과정 </p>
 
 <br>
+
 ---------------------------
 
 <br>
@@ -79,7 +84,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 
 <br>
 
-<p class="text"> _서울시 빅데이터 캠퍼스 공모전_ </p> <br>
+<p class="text"> _서울시 빅데이터 캠퍼스 공모전_ </p>
 <p class="text"> 공공빅데이터 기반 소방대피시설 배치 </p> <br>
-<p class="text"> _엔코아 데이터 모델링 스쿨_ </p> <br>
+<p class="text"> _엔코아 데이터 모델링 스쿨_ </p>
 <p class="text"> 데이터 기반 고액 기부자 예측 모델링 </p>
