@@ -123,7 +123,7 @@ public class ThreadTest extends Thread {
 
 		for(int i = 0 ; i < threadList.size(); i++){
 			try {
-				threadList.get(i).join(); // 쓰레드의 처리가 끝날때까지 기다립니다.
+				threadList.get(i).join(); // 쓰레드의 처리가 끝날때까지 기다립니다
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
