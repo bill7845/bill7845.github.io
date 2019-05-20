@@ -27,7 +27,9 @@ feature-img: "assets/img/sample_feature_img_2.png"
 
 </center>
 <br>
+
 ---------------------------
+
 <br>
 
 <center>
@@ -56,10 +58,11 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
-<h3>3. Experience</h3>
+<h3> 3. Experience </h3>
 </center>
 
 <br>
+
 	<p class="text"> 2016.12~2017.1  멀티캠퍼스<br> 빅데이터 활용을 위한 웹프로그래밍 </p><br>
   <p class="text">2017.9~2017.12  수원대학교<br> 빅데이터 장학생 </p><br>
   <p class="text">2019.1~2019.2   엔코아<br> 데이터 모델링 스쿨 </p><br>
@@ -76,5 +79,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 
 <br>
 
-<p class="text"> _서울시 빅데이터 캠퍼스 공모전_ <br> 공공빅데이터 기반 소방대피시설 배치</p>
-<p class="text"> _엔코아 데이터 모델링 스쿨_ <br>  데이터 기반 고액 기부자 예측 모델링</p>
+<p class="text"> _서울시 빅데이터 캠퍼스 공모전_ </p> <br>
+<p class="text"> 공공빅데이터 기반 소방대피시설 배치 </p> <br>
+<p class="text"> _엔코아 데이터 모델링 스쿨_ </p> <br>
+<p class="text"> 데이터 기반 고액 기부자 예측 모델링 </p>
