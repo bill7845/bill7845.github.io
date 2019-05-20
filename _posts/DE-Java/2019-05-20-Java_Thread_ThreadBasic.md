@@ -186,7 +186,7 @@ public class ThreadTest extends Thread {
 			ThreadTest test = new ThreadTest(i);
 
 			test.start(); // 이 메소드를 실행하면 Thread 내의 run()을 수행한다.
-			threadList.add(test); // 생성한 쓰레드를 리스트에 삽입
+			threadList.add(test); // 생성한 쓰레드를 리스트에 삽입	=> ArrayList에 쓰레드의 주소(순서)를 넣는다 ?
 		}
 
 		for(int i = 0 ; i < threadList.size(); i++){
