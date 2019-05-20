@@ -29,38 +29,41 @@ feature-img: "assets/img/sample_feature_img_2.png"
 
 ---------------------------
 
-<h3>1. Skills</h3>
-
+<center>
+<h3>1. Skills </h3>
+<br>
  <p class="text"> * Program Language : Python, Java</p>
 
  <p class="text"> * Database : ORACEL, MYSQL</p>
 
+</center>
+
 <br>
 
+<center>
 <h3>2. Interest</h3>
-
-
+<br>
    <p class="text"> Data Analytics, Data Visualization, Business Analytics, Branding Strategy </p>
+<center>
 
 <br>
 
 <h3>3. Experience</h3>
-
-<div id="jb-sidebar">
-	<p> 2016.12~2017.1  멀티캠퍼스<br> 빅데이터 활용을 위한 웹프로그래밍 </p>
-    <p>2017.9~2017.12  수원대학교<br> 빅데이터 장학생 </p>
-    <p>2019.1~2019.2   엔코아<br> 데이터 모델링 스쿨 </p>
+<br>
+<p class="text">
+	<p> 2016.12~2017.1  멀티캠퍼스<br> 빅데이터 활용을 위한 웹프로그래밍 </p><br>
+    <p>2017.9~2017.12  수원대학교<br> 빅데이터 장학생 </p><br>
+    <p>2019.1~2019.2   엔코아<br> 데이터 모델링 스쿨 </p><br>
     <p>2017.4~현재    플레이데이터<br> 파이썬 기반 빅데이터 엔지니어 전문가 과정 </p>
-</div>
+</p>
 
-<br><br><br><br><br>
+<br>
 
-</div>
-
-<div id="jb-content">
+<h3> 4. Project </h3>
+<br>
+<p class="text">
     <p>서울시 빅데이터 캠퍼스 공모전<br>
 	* 공공빅데이터 기반 소방대피시설 배치</p>
   <p>엔코아 데이터 모델링 스쿨<br>
 * 데이터 기반 고액 기부자 예측 모델링</p>
-
-</div>
+</p>
