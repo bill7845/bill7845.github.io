@@ -19,6 +19,7 @@ import pandas as pd   # pandas 패키지 불러오기
 import numpy as np    # numpy 패키지 불러오기
 ```
 
+<br>
 > pandas로 csv파일 불러오기 <br>
 
 
@@ -31,7 +32,8 @@ df = pd.read_csv('bank_customer.csv')
 df #  실행시 전체 dataSet 출력
 ```
 
-> 불러온 csv파일 확인
+
+> 불러온 csv파일 확인 <br>
 
 
 ```python
@@ -57,7 +59,8 @@ df.info()
     memory usage: 953.7+ KB
 
 
-> 9개의 column(index 제외) , column별 row, null값 여부, dataType 확인
+
+> 9개의 column(index 제외) , column별 row, null값 여부, dataType 확인 <br>
 
 
 ```python
@@ -234,16 +237,19 @@ df.T # 데이터 전치 ( Columns <-> index )
 df.sort_index(ascending=True) # ascending = False
 ```
 
-> 데이터 오름차순,내림차순 정렬 (index 기준)
+
+> 데이터 오름차순,내림차순 정렬 (index 기준) <br>
 
 
 ```python
 df.sort_values(by='age',ascending=False)
 ```
 
-> 데이터 값 기준으로 정렬(특정 column 선택)
+
+> 데이터 값 기준으로 정렬(특정 column 선택) <br><br>
 
 ### 2. Data Selection
+<br><br>
 
 
 ```python
@@ -254,6 +260,7 @@ df[['age','cid']]  # 다중선택 => [[]]
 ```
 
 > column 선택하기
+<br>
 
 
 ```python
@@ -419,7 +426,7 @@ df[0:10] # 0~9 행 슬라이스  ## df.loc[0:10]
 
 
 
-> 슬라이스
+> 슬라이스 <br>
 
 
 ```python
@@ -428,8 +435,11 @@ df[0:10] # 0~9 행 슬라이스  ## df.loc[0:10]
 
 > range index뿐만 아니라 날짜 인덱스 등 다양한 형식 가능 <br>
 > 만약 index가 2013-05-02 인 경우 pandas에서 자동으로 20130502로 인식
+<br>
 
+<br>
 ####  2.1 loc,iloc
+<br>
 
 > dataframe.loc[행,열] <br><br>
 loc[] 에 값을 하나만 넣는 경우 row 선택 <br>
@@ -500,7 +510,7 @@ df.loc[ df.age > 300 ]   # boolean 활용 loc 슬라이싱
 
 
 
-> boolean값 활용 indexing
+> boolean값 활용 indexing <br>
 
 
 ```python
@@ -561,7 +571,7 @@ df.loc[re_index(df)]  #  loc의 행을 함수값으로 줌
 
 
 
-> 함수 활용
+> 함수 활용 <br>
 
 
 ```python
@@ -657,6 +667,8 @@ df.loc[35:45,['age','cid']]  # loc [35~45 행, 컬럼 사용자 지정]
 
 
 
+<br>
+
 
 ```python
 df.iloc[0:10,1]   # iloc 사용
@@ -683,14 +695,16 @@ df.iloc[0:10,1]   # iloc 사용
 > iloc는 loc와 다르게 integer 타입으로만 범위 지정이 가능하다 <br>
 > loc처럼 특정 값의 형식으로 index를 지정할 수 없고 오직 몇번째인지 integer형식으로만 지정 가능
 > df.iloc[row index range , column range]
+<br><br>
 
 ### 3. Data Setting
+<br><br>
 
 
 ```python
 # 데이터 프레임에 새로운 col을 추가할 경우 index range에 맞게 값 지정해주는 방법
 
-# df_2 = df # 복사본 생성
+df_2 = df # 복사본 생성
 # df_2['E'] = df['cid']  # df_2[E] 컬럼을 원본읜 cid컬럼 가져와서 생성 (* 행범위 맞추기 위해)
 # 이런식으로 만들면 이미 만들어져 있는(범위에 맞게) 컬럼만 사용가능
 
@@ -781,9 +795,12 @@ df_2.loc[0:10,['E']]  ## 확인
 #  df2
 ```
 
+<br><br>
 ###  4. Missing Data(결측치)
+<br>
 
 > 결측값 확인하기
+<br>
 
 
 ```python
@@ -832,6 +849,7 @@ df.isnull().sum(1)  # row 별 결측값 개수 확인
 # df.notnull().sum(1)  # row 별 결측값 제외 개수 확인
 ```
 
+<br>
 > 결측값 처리하기
 
 
@@ -874,6 +892,7 @@ df.isnull().sum()
 2. mean, std 연산시 => 분석대상에서 제외 <br>
 3. column간 연산시 하나라도 결측값이면 결측값으로 반환됨 ( ex) 컬럼1 + 컬럼2 = 컬럼3 으로 표현하는 경우) <br>
 4. dataframe간 연산시 동일한 컬럼끼리는 non을 0으로 처리, 한쪽에만 존재하는 컬럼과의 연산은 non 반환
+<br><br>
 
 #### apply로 함수 적용
 
@@ -969,6 +988,7 @@ df_t[['A','C']].apply(lambda x: x.max()-x.min(), axis = 0 )  # axis=0 =>  column
 df_t[['A','C']].apply(lambda x: x.max()-x.min(), axis = 1 )  # axis=1 => row별 함수연산
 ```
 
+<br>
 ##### lambda  
 
 <br>
@@ -993,6 +1013,7 @@ def hap(x, y):
 (lambda x,y: x + y)(10, 20)
 ```
 
+<br>
 #### map
 <br>
 > map(함수,리스트) <br>
@@ -1018,6 +1039,7 @@ list(map(lambda x : x**2,range(5)))
 
 
 
+<br>
 #### reduce
 <br>
 > reduce는 *순서형자료(리스트,튜플,문자열)의 원소들을 누적적으로 함수에 적용시켜 줌 <br>
@@ -1040,6 +1062,7 @@ reduce(lambda x,y : x+y , range(5))
 
 
 
+<br>
 #### filter
 <br>
 
@@ -1070,7 +1093,9 @@ list(filter(lambda x : x, [-1,-2,0,1,2,3,4]))  # 0은 F값이므로 걸러짐 �
 
 
 
-### GROUPING
+<br><br>
+###  5. GROUPING
+<br><br>
 
 <br>
 
@@ -1333,7 +1358,9 @@ df_grouped_job_marital
 
 
 
-### Categorical Data
+<br><br>
+### 6. Categorical Data
+<br><br>
 
 
 ```python
