@@ -40,9 +40,8 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
- <p class="text"> * Program Language : Python, Java</p>
-
- <p class="text"> * Database : ORACEL, MYSQL</p>
+ <p> * Program Language : Python, Java </p>
+ <p> * Database : ORACEL, MYSQL </p>
 </center>
 
 <br>
@@ -72,10 +71,14 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
-  <p class="text">2016.12~2017.1  멀티캠퍼스<br> 빅데이터 활용을 위한 웹 프로그래밍 </p><br>
-  <p class="text">2017.9~2017.12  수원대학교<br> 빅데이터 장학생 </p><br>
-  <p class="text">2019.1~2019.2   엔코아<br> 데이터 모델링 스쿨 </p><br>
-  <p class="text">2017.4~현재    플레이데이터<br> 파이썬 기반 빅데이터 엔지니어 전문가 과정 </p>
+  <p> 2016.12~2017.1 멀티캠퍼스 </p>
+  <p> 빅데이터 활용을 위한 웹 프로그래밍 </p> <br>
+  <p> 2017.9~2017.12  수원대학교 </p>
+  <p> 빅데이터 장학생 </p> <br>
+  <p> 2019.1~2019.2  엔코아 </p>
+  <p> 데이터 모델링 스쿨 </p> <br>
+  <p> 2019.4~  플레이데이터 </p>
+  <p> 파이썬 기반 빅데이터 엔지니어 전문가 과정 </p>
 </center>
 
 <br>
