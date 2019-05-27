@@ -19,7 +19,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 
 <center>
 
-<p>안녕하세요 </p>
+<p> 안녕하세요 </p>
 
 <p>제 블로그에 방문해 주셔서 감사합니다.</p>
 
@@ -34,7 +34,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
-<h3>1. Skills </h3>
+<h2>1. Skills </h2>
 </center>
 
 <br>
@@ -51,7 +51,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
-<h3>2. Interest</h3>
+<h2>2. Interest</h2>
 </center>
 
 <br>
@@ -65,7 +65,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
-<h3> 3. Experience </h3>
+<h2> 3. Experience </h2>
 </center>
 
 <br>
@@ -88,7 +88,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 <center>
-<h3> 4. Project </h3>
+<h2> 4. Project </h2>
 </center>
 
 <br>
