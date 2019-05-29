@@ -18,6 +18,8 @@ tags: [Project]
 
 <p> POS(Point-of-Sale) 시스템을 구축하여 효율적 매출관리를 지원하며, 고객 경험을 개선하고 비즈니스 운영을 간소화 </p>
 
+<br>
+
 * 계정
 > 관리자와 일반종업원 계정별로 접근 권한을 달리 부여 <br>
 > 일반종업원은 시스템의 판매탭에만 접근 가능하며 관리자계정은 모든 시스템에 접근 가능<br>
@@ -250,7 +252,9 @@ public ArrayList PaymentList(String pno) throws Exception { //
 ```
 
 <br><br>
+
 #### 3.3 로그인 기능 구현
+
 <br>
 
 ![Alt text](/assets/img/login.png)
@@ -262,12 +266,58 @@ public ArrayList PaymentList(String pno) throws Exception { //
 
 
 
-<br<br>
+<br><br>
+
 #### 3.4 로그인 기능별 method구현
 
 <br>
 
-<br<br>
+```java
+
+public Login LoginCheck(String id, String pass ) throws Exception{	// 로그인탭에서 id,pass를 입력받아 인자로
+			// DB연결
+			Login vo = new Login();	//로그인 정보 연결객체(vo) 생성
+
+			con = DriverManager.getConnection(url, user, passwd);  
+
+
+					String sql = "SELECT EID FROM EMPLOYEE WHERE EID = ?";  //연결된 DB에서 입력받은 id값을 이용하여 직원정보 SELECT
+
+					// 전송객체
+					PreparedStatement st = con.prepareStatement(sql);
+					st.setString(1, id); // SQL문의 첫번째 ?에 로그인화면에서 입력받은 id 입력
+
+          //전송
+					ResultSet rs = st.executeQuery();
+					if(rs.next()) {
+					vo.setEID(rs.getString("EID"));	//DB에서 가져온 직원정보를 로그인탭으로 전송
+					}
+
+					String sql2 = "select EPASS FROM EMPLOYEE WHERE EPASS = ?"; //연결된 DB에서 입력받은 pass값을 이용해 직원정보 SELECT
+
+          //전송객체
+					PreparedStatement st1 = con.prepareStatement(sql2);
+					st1.setString(1, pass);  // SQL문의 첫번째 ?에 로그인화면에서 입력받은 pass 입력
+
+        	//전송
+					ResultSet rs2 = st1.executeQuery();
+					if(rs2.next()) {
+					vo.setEPASS(rs2.getString("EPASS")); //DB에서 가져온 직원정보를 로그인탭으로 전송
+					}
+
+					rs.close();
+					rs2.close();				
+					st.close();
+					st1.close();
+          con.close();
+
+					return vo; // vo클래스를 통해 정보 전송
+		}
+	}
+```
+
+<br><br>
+
 #### 3.5 재고탭 구현
 
 <br>
@@ -275,15 +325,61 @@ public ArrayList PaymentList(String pno) throws Exception { //
 ![Alt text](/assets/img/balju.png)
 
 <br><br>
+
 #### 3.6 재고탭 기능별 method
+
 <br>
 
+```java
+public ArrayList SearchStock() throws Exception{  // DB의 원자재 잔여수량을 확인하기 위한 메서드  //확인한 재고를 ArrayList에 담아 전송
+  Connection con = DriverManager.getConnection(url, user, pass);
+
+      String sql = "SELECT ONO, ONAME, OCOUNT FROM ORIGINAL";  //원재료 테이블에서 원재료번호, 원재료이름, 원재료 갯수 출력
+
+      ArrayList list = new ArrayList();
+      PreparedStatement st = con.prepareStatement(sql);
+      ResultSet rs = st.executeQuery();
+
+      while(rs.next()) {
+         ArrayList data = new ArrayList();
+         data.add(rs.getString("ONO"));
+         data.add(rs.getString("ONAME"));
+         data.add(rs.getInt("OCOUNT"));
+         list.add(data);
+      }
+
+      st.close();
+      con.close();
+      return list;      
+}
+
+
+
+public Stock InsertBalju(String vNum, int a) throws Exception{  // 발주테이블에 데이터를 삽입하기 위한 메소드
+
+  Stock vo = new Stock();
+  Connection con = DriverManager.getConnection(url, user, pass);
+
+  String sql = "Insert into BALJU(BALJUNO, BALJUDATE, BALJUCOUNT, BNUMBER,ONO) VALUES (VALJU_SEQ.NEXTVAL, SYSDATE, ?, 'B1111',?)";  //		발주를 했을때 입력된 발주정보를 삽입하기 위한 쿼리문
+
+
+      PreparedStatement st = con.prepareStatement(sql);
+      st.setInt(1,a); //원재료 갯수 삽입
+      st.setString(2, vNum); // 원재료 번호 삽입
+      ResultSet rs = st.executeQuery();
+
+      st.close();
+      con.close();
+
+      return vo;
+
+}
+```
+
 <br><br>
+
 #### 3.7 매출탭 구현
+
 <br>
 
 ![Alt text](/assets/img/sale.png)
-
-<br><br>
-#### 3.8 매출탭 기능별 method
-<br>
