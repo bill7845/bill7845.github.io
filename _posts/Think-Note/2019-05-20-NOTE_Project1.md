@@ -13,6 +13,7 @@ tags: [Project]
 <br>
 
 ## 1. 프로젝트 개요 및 사용자 요구사항
+---
 
 <br>
 
@@ -20,13 +21,16 @@ tags: [Project]
 
 <br>
 
+---
 * 계정
 > 관리자와 일반종업원 계정별로 접근 권한을 달리 부여 <br>
 > 일반종업원은 시스템의 판매탭에만 접근 가능하며 관리자계정은 모든 시스템에 접근 가능<br>
 > 로그인 화면에서 id,password를 입력작업을 통해 계정 구분
+---
 
 <br>
 
+---
 * 판매
 > 판매 화면에서 제품버튼을 클릭 시 판매목록에 클릭 한 제품이 추가되며, 가격란에 가격이 합산 되어 출력됨<br>
 > 동일제품 중복클릭시 해당 제품이 판매리스트에 중복추가됨 <br>
@@ -34,24 +38,30 @@ tags: [Project]
 > '취소' 버튼을 통해 주문을 취소 할 수있으며 취소버튼 클릭시 추가 된 판매리스트 또한 초기화 됨 <br>
 > 회원과 비회원 여부에 따라 적립/비적립 방식으로 결제 기능 수행 <br>
 > 회원 결제의 경우, 회원번호 입력 후 구매금액에 따라 마일리지 적립됨
+---
 
 <br>
 
+---
 * 매출
 > 결제과정을 거쳐, 연결 된 DB에 저장된 판매 Data를 가져와 매출 요약 화면 구현<br>
 > 판매 된 제품별 매출 그래프 구현<br>
 > 해당 매장의 일,월별 매출 그래프 구현
+---
 
 <br>
 
+---
 * 재고
 > 해당 매장의 제품이 판매될때마다 연결된 DB에서 제품의 원재료 보유수량을 차감시킴<br>
 > 재고 탭에서 원재료의 잔여수량을 실시간으로 확인 가능<br>
 > 재고 탭에서 원재료 잔여수량 확인 후 발주버튼 통해 발주수량 입력 및 발주 기능 <br>
+---
 
 <br><br>
 
 ## 2. DB모델 설계
+---
 
 <br>
 
@@ -60,10 +70,12 @@ tags: [Project]
 <br>
 
 ## 3. 구현 화면 & 코드
+---
 
 <br>
 
 #### 3.1 판매탭 버튼별 기능
+---
 
 <br>
 ![Alt text](/assets/img/sellMain.png)
@@ -133,6 +145,7 @@ public void actionPerformed(ActionEvent ev) {	// 액션 리스너
 <br>
 
 #### 3.2 판매탭 기능별 method 구현
+---
 
 <br>
 
@@ -254,6 +267,7 @@ public ArrayList PaymentList(String pno) throws Exception { //
 <br><br>
 
 #### 3.3 로그인 기능 구현
+---
 
 <br>
 
@@ -269,6 +283,7 @@ public ArrayList PaymentList(String pno) throws Exception { //
 <br><br>
 
 #### 3.4 로그인 기능별 method구현
+---
 
 <br>
 
@@ -319,6 +334,7 @@ public Login LoginCheck(String id, String pass ) throws Exception{	// 로그인�
 <br><br>
 
 #### 3.5 재고탭 구현
+---
 
 <br>
 
@@ -327,6 +343,7 @@ public Login LoginCheck(String id, String pass ) throws Exception{	// 로그인�
 <br><br>
 
 #### 3.6 재고탭 기능별 method
+---
 
 <br>
 
@@ -379,6 +396,7 @@ public Stock InsertBalju(String vNum, int a) throws Exception{  // 발주테이�
 <br><br>
 
 #### 3.7 매출탭 구현
+---
 
 <br>
 
