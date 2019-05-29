@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 플레이데이터 팀프로젝트1
+title: 플레이데이터 프로젝트_1
 comments: true
 categories: [Think/Note]
 tags: [Project]
 ---
 <br>
 
-# <center> Pos 시스템 구축 팀프로젝트 </center>
+# <center> Pos 시스템 구축  </center>
 ---
 
 <br>
