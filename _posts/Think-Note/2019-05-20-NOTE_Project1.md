@@ -7,14 +7,12 @@ tags: [Project]
 ---
 <br>
 
-# <center> 프로젝트 사용자 요구사항 </center>
+# <center> Pos 시스템 구축 팀프로젝트 </center>
 ---
 
 <br>
 
-## 1. 프로젝트 개요
-
-* Java,Oracle 연동 카페 POS 시스템 구현
+## 1. 프로젝트 개요 및 사용자 요구사항
 
 <br>
 
@@ -39,7 +37,7 @@ tags: [Project]
 
 ## 3. DB모델 설계
 
-<!--ERD  -->
+![Alt text](/assets/img/erd.png)
 
 <br>
 
@@ -116,6 +114,8 @@ public void actionPerformed(ActionEvent ev) {	// 액션 리스너
 }
 
 ```
+
+<br>
 
 #### 4.2 판매탭 기능별 method 구현
 
