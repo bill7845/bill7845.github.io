@@ -41,22 +41,6 @@ df.info()
 # df.values
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 13563 entries, 0 to 13562
-    Data columns (total 9 columns):
-    cid          13563 non-null object
-    age          13563 non-null int64
-    job          13476 non-null object
-    marital      13563 non-null object
-    education    12995 non-null float64
-    default      13563 non-null object
-    balance      13563 non-null int64
-    housing      13563 non-null object
-    loan         13563 non-null object
-    dtypes: float64(1), int64(2), object(6)
-    memory usage: 953.7+ KB
-
-
 > 9개의 column(index 제외) , column별 row, null값 여부, dataType 확인
 
 
