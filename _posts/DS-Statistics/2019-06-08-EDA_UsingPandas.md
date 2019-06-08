@@ -1169,6 +1169,7 @@ loans_crosstab2=loans_crosstab.loc['A',].sort_values().plot(kind='barh',title='A
 airline_delay = pd.read_csv('airline_stats.csv')
 ```
 
+<br>
 ### boxplot 실행 시 AttributeError: 'Series' object has no attribute 'boxplot' 에러가 뜨는 경우
 <br>
 
