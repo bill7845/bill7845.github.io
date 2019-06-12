@@ -2,7 +2,7 @@
 layout: post
 title: Javascript
 comments: true
-categories: [Web]/Javascript]
+categories: [Web/Javascript]
 tags: [Web,html,Javascript]
 ---
 <br>
