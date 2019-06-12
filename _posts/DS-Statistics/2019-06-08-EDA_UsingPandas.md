@@ -408,8 +408,8 @@ state.boxplot(column=['Population'])
 plt.show()
 ```
 
+<center><img src="output_32_0.png" width="80%"></center><br>
 
-![png](output_32_0.png)
 
 
 <br>
