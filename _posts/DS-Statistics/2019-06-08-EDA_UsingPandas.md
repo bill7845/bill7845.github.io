@@ -955,7 +955,7 @@ ax = kc_tax_hexbin.plot.hexbin(x='SqFtTotLiving', y='TaxAssessedValue', gridsize
 ```
 
 
-<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_50_0.png" ></center>(output_50_0.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_50_0.png" ></center>
 
 
 <br>
