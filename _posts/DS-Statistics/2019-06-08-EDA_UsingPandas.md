@@ -408,7 +408,7 @@ state.boxplot(column=['Population'])
 plt.show()
 ```
 
-<center><img src="output_32_0.png" width="80%"></center><br>
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_32_0.png" width="80%"></center><br>
 
 
 
