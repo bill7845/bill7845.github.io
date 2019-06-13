@@ -408,7 +408,7 @@ state.boxplot(column=['Population'])
 plt.show()
 ```
 
-<center><img src="output_32_0.png" width="80%"></center><br>
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_32_0.png" width="80%"></center><br>
 
 
 
@@ -549,7 +549,7 @@ plt.xlabel('lifeExp'),plt.ylabel('frequency')
 
 
 
-![png](output_36_1.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_36_1.png" ></center>
 
 
 <br>
@@ -574,32 +574,19 @@ plt.xlabel('lifeExp'),plt.ylabel('frequency')
 df_1.groupby('position')['position'].count().plot(kind='bar')
 ```
 
+<br>
 
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_38_1.png" ></center>
 
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x2aca573f320>
-
-
-
-
-![png](output_38_1.png)
-
-
+<br>
 
 ```python
 df_1.groupby('position')['position'].count().plot(kind='pie')
 ```
 
+<br>
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x2aca5895b70>
-
-
-
-
-![png](output_39_1.png)
-
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_39_1.png" ></center>
 
 <br>
 #### 3.4 상관계수
@@ -872,17 +859,11 @@ from pandas.plotting import scatter_matrix
 df_1.plot(kind="scatter", x="HBP", y="TB", alpha=0.1)
 ```
 
+<br>
 
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_45_1.png" ></center>
 
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a41961eda0>
-
-
-
-
-![png](output_45_1.png)
-
-
+<br>
 
 ```python
 # scatterplot matrix with histogram only for continuous variables
@@ -892,8 +873,9 @@ sns.pairplot(state, diag_kind='hist')  # 대각선 그림은 히스토그램으�
 plt.show()
 ```
 
+<br>
 
-![png](output_46_0.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_46_0.png" ></center>
 
 
 <br>
@@ -973,7 +955,7 @@ ax = kc_tax_hexbin.plot.hexbin(x='SqFtTotLiving', y='TaxAssessedValue', gridsize
 ```
 
 
-![png](output_50_0.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_50_0.png" ></center>
 
 
 <br>
@@ -1136,25 +1118,20 @@ loans_crosstab
 loans_crosstab.loc['A',].plot(kind='bar')
 ```
 
+<br>
 
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_56_1.png" ></center>
 
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x2b3bafb5e80>
-
-
-
-
-![png](output_56_1.png)
-
-
+<br>
 
 ```python
 ## 빈도수 시각화 2. (내림차순)
 loans_crosstab2=loans_crosstab.loc['A',].sort_values().plot(kind='barh',title='A')
 ```
 
+<br>
 
-![png](output_57_0.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_57_0.png" ></center>
 
 
 <br>
@@ -1185,7 +1162,7 @@ plt.show()
 ```
 
 
-![png](output_61_0.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_61_0.png" ></center>
 
 
 <br>
@@ -1227,20 +1204,20 @@ selected_hexbin = kc_tax_selected.groupby('ZipCode').plot.hexbin(x='SqFtTotLivin
 ```
 
 
-![png](output_64_0.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_64_0.png" ></center>
 
 
 
-![png](output_64_1.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_64_1.png" ></center>
 
 
 
-![png](output_64_2.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_64_2.png" ></center>
 
 
 
-![png](output_64_3.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_64_3.png" ></center>
 
 
 
-![png](output_64_4.png)
+<center><img src="https://github.com/bill7845/bill7845.github.io/raw/master/_posts/DS-Statistics/output_64_4.png" ></center>
