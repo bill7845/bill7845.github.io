@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 판다스 Basic
+title: Jquery
 comments: true
-categories: [Web/Jquery]
-tags: [Statistics,JupyterNotebook,Pandas,Numpy]
+categories: [Web_to/Jquery]
+tags: [Jquery]
 ---
 <br>
 
