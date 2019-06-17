@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 판다스 Basic
+title: 제이쿼리
 comments: true
 categories: [Web/Javascript]
 tags: [Statistics,JupyterNotebook,Pandas,Numpy]
