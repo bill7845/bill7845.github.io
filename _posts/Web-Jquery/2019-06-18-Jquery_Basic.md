@@ -21,7 +21,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-```html
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,7 +79,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-```html
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -173,7 +173,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-```html
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -331,7 +331,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-```html
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -433,7 +433,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-```html
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
