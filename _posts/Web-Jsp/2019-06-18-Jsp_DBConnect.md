@@ -17,7 +17,7 @@ tags: [Web,Javascript,Jsp]
 
 * 기본 폼
 <br>
-```html
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
