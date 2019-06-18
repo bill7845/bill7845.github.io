@@ -69,7 +69,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-### 기초문법2
+### Jquery 기초문법2
 
 <br>
 
@@ -162,7 +162,7 @@ tags: [Web,Javascript,Jquery]
 
 <br>
 
-### jquery 기초문법3
+### Jquery 기초문법3
 
 <br>
 
@@ -321,6 +321,181 @@ tags: [Web,Javascript,Jquery]
 		<div class="data">나이</div>
 
 
+</body>
+</html>
+```
+
+<br>
+
+### Jquery filter
+
+<br>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery filter</title>
+
+<!--4. class 속성제어 -->
+<style type="text/css">
+	.bg { background : yellow; }
+	.border { border : 3px dotted red; }
+	.borderRed { border : 3px dotted red; }
+	.borderBlue { border : 3px dotted blue; }
+</style>
+
+<script type="text/javascript" src = "../lib/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		//요소찾기
+//$("li") -> 모든 li요소
+// 		//li첫번째 요소
+// 		alert($("li:eq(0)").text());
+
+// 		//짝수요소
+// 		alert($("li:even").text());
+
+// 		//네번째 요소
+// 		alert($("li:eq(3)").text());
+
+// 		//세번째까지의 요소
+// 		alert($("li:lt(3)").text());
+
+// 		//첫번째를 제외한 요소
+// 		alert($("li:gt(0)").text());
+
+// 		//'튀김'을 포함한 요소
+// 		alert($("li:contains('튀김')").text());
+
+		//각 그룹별 첫번째 요소 css랑 위치찾는게 비슷하다
+		//다 같다
+// 		$("li:first-child").css("border", "1px solid red");
+// 		$("ul").find("li:first").css("border", "1px solid blue");
+
+		//li요소 클릭 시 bg클래스 추가, toggleClass는 클릭할때마다 add했다가 remove했다가 반복
+		$("li").each(function(){
+			$(this).click(function(){
+				$(this).addClass("bg");
+			});
+		});
+		//어묵 밑에 자식요소들만 border 클래스 적용
+		$("#food").find("ul").children().css("border", "1px solid red");
+
+		//li요소에 마우스가 올라가면 bg클래스 적용, 내려가면 bg클래스 제거. 단, 어묵밑의 자식요소 빼고
+		$("ul > li").not("#food ul > li, #food :nth-child(3)").hover(function(){
+			$(this).addClass("bg");
+		}, function(){
+			$(this).removeClass("bg");
+		});
+
+	});
+
+</script>
+
+</head>
+<body>
+		<h1>제이쿼리 시작</h1>
+		<h2>내가 좋아하는 음식 </h2>
+		<ul id="food">
+			<li>떡볶이</li>
+			<li>어묵</li>
+			<li>
+				<ul>
+					<li>어묵꼬치</li>
+					<li>어묵튀김</li>
+					<li>어묵탕</li>
+				</ul>
+			</li>
+			<li>닭튀김</li>
+			<li>돼지튀김</li>
+			<li>소튀김</li>
+			<li>구두튀김</li>
+		</ul>
+		<!-- 2. 추가하고 다시 확인 -->
+		<h2>내가 좋아하는 술</h2>
+		<ul>
+			<li>와인</li>
+			<li>맥주</li>
+			<li>막걸리</li>
+			<li>소주</li>
+		</ul>
+	<div id="result"></div>
+</body>
+</html>
+```
+
+<br>
+
+### jquery event
+
+<br>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery event</title>
+
+<style type="text/css">
+	.bg { background : yellow; }
+	.border { border : 3px dotted red; }
+</style>
+<script type="text/javascript" src = "../lib/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//이벤트 연결 방식 (정석)
+		//bind는 매번 이벤트 연결
+		//one은 한번만 연결 각 요소마다.
+// 		$("li").bind("click", function(){
+// 			$("#result").text($(this).text());
+// 		});
+
+// 		$("li").one("click", function(){
+// 			$("#result").text($(this).text());
+// 		});
+
+		//축약형을 훨씬 많이씀
+// 		$("li").click(function(){
+// 			$("#result").text($(this).text());
+// 		});
+
+		//이벤트 요소가 함수 매개변수로 들어온다. 확인용
+		$("li").click(function(evt){
+			for(var prop in evt){
+				console.log(prop + ":" + evt[prop]);
+			}
+		});
+
+		//동적으로 li요소 만들기
+		$("h1").click(function(){
+			var li = $('<li/>').text(new Date());
+			$("ul").append(li);
+		});
+
+		//h1요소에 마우스 대면 손바닥모양 표시 : 누르란 의미
+		$("h1").css("cursor", "pointer");
+
+		//동적으로 만든 요소에도 이벤트가 적용되게 하는 법 live는 옛날버전 최근에는 on을 사용한다.
+		$("body").on("click" ,'ul > li', function(){
+			$("#result").text($(this).text());
+		});
+	});
+</script>
+
+</head>
+<body>
+	<h1>제이쿼리 이벤트</h1>
+	 <ul>
+		<li>부에노스 아이레스</li>
+		<li>바르셀로나</li>
+		<li>리마</li>
+		<li>라파스</li>
+	 </ul>
+	<div id="result"></div>
 </body>
 </html>
 ```
