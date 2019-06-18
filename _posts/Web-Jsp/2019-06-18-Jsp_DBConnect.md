@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jsp form
+title: Jsp DB Connection
 comments: true
 categories: [Web/Jsp]
 tags: [Web,Javascript,Jsp]
@@ -16,7 +16,7 @@ tags: [Web,Javascript,Jsp]
 <br>
 
 * 기본 폼
-<br>
+
 ```javascript
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@ tags: [Web,Javascript,Jsp]
     <div id="content">
       <div id="signup">
         <h2>회원 가입</h2>
-        <form action="member.jsp">       <!--member.jsp 와 연결  -->
+        <form action="member.jsp">   // member.jsp와 연결
           <div>
             <label for="name">이름:</label>
             <input name="name" id="name" type="text"/>
@@ -90,8 +90,6 @@ tags: [Web,Javascript,Jsp]
 
 * member.jsp
 
-<br/>
-
 ```javascript
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -142,7 +140,7 @@ tags: [Web,Javascript,Jsp]
 
 <h2>정보 수정</h2>
 
-        <form action="Updatemember.jsp">
+        <form action="Updatemember.jsp">  // Updatemember.jsp와 연결
 
           <div>
             <label for="name">이름:</label>
@@ -161,6 +159,64 @@ tags: [Web,Javascript,Jsp]
        	  </div>
 
 		</form>
+
+</body>
+</html>
+```
+
+<br>
+
+* Updatemember.jsp
+
+```javascript
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+    <%
+
+request.setCharacterEncoding("utf-8");
+
+	String name = request.getParameter("name");
+	String website = request.getParameter("website");
+	String email = request.getParameter("email");
+
+
+	// 1. 드라이버 로딩
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@192.168.0.216:1521:orcl";
+	String user = "KIHYUK";
+	String pass = "3927";
+
+	Connection con = null;
+	PreparedStatement st = null;
+
+	Class.forName(driver);
+
+	//2. 연결객체 얻어오기
+	con = DriverManager.getConnection(url,user,pass);
+
+	// 3. sql 문장 만들기
+	String sql = "UPDATE MEM SET name = ?, url = ? WHERE email = ?";
+	// 4. 전송 객체 얻어오기
+	st = con.prepareStatement(sql);
+	st.setString(1,name);
+	st.setString(2,website);
+	st.setString(3,email);
+	st.executeUpdate();
+
+
+    %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
 
 </body>
 </html>
