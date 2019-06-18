@@ -179,6 +179,7 @@ tags: [Web,Javascript,Jsp]
 
 </td><td>
 
+
 문을 자주 열어도, 음식을 많이 채워도,
 역시 LG 싱싱특급~
 - 용량 : 500L (냉장 : 360L, 냉동 : 140L)
@@ -209,6 +210,7 @@ tags: [Web,Javascript,Jsp]
 <input type='submit' value="장바구니">
 </form>
 </body>
+
 ```
 
 <br>
@@ -225,37 +227,6 @@ tags: [Web,Javascript,Jsp]
 
 <table><tr><td><img src='imgs/1020.jpg' width='180'>
 
-</td><td>
-^^상품설명^^
-*14" 화면 명품 플러스
-*절약형 절전 TV
-*Dual스피커 채용의 고감각 디자인
-(측면Ear Type)  
-*초절전 버튼(대기 소비 전력 Zero)
-*A/V 입력 단자: 후1
-*다기능 간단 리모컨(VTR 조작기능)  
-*크기: 380 X 325 X 381(mm)
-</td></tr></table>
-
-<pre>
-[[ 특징 ]]
-*절전 스위치를 내장한 초절전 TV:  
-대기 소비전력을 0으로 낮추어서 TV 평균 사용 기간인
-7년이 지나면 14인치 TV 1대를 구입할 수 있는 금액을
-아낄 수 있습니다.  
-(1일 6시간 시청기준, 월 500KW이상 사용 가정의 경우)  
-(본 제품은 에너지 절약마크 획득 제품입니다 )  
-
-*고감각 디자인:  
-DUAL 스피커를 채용한 미려한 디자인으로 어디서나 잘
-어울리는 고감각 디자인 제품입니다.  
-
-*다기능 간단 리모컨 채용:  
-TV와 VTR을 겸용으로 사용할수 있는 인체공학적 간단 리모컨을
-채용하고 있습니다.
-
-
-</pre>
 147,000 원
 <form method='post' action='Cart.jsp'>
 <input type='hidden' name='id' value="1020">
@@ -266,5 +237,139 @@ TV와 VTR을 겸용으로 사용할수 있는 인체공학적 간단 리모컨�
 
 </body>
 </html>
+```
+
+<br>
+
+* Cart.jsp
+
+```javascript
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page import="java.util.*" %>
+<%@ page import="shop.cart.Goods" %>  // java 클래스 import
+<%
+	String id="";
+	String name ="";
+	int price=0;
+
+	ArrayList<Goods> glist = null;
+
+	request.setCharacterEncoding("utf-8");
+
+	// 1. Form의 값(hidden값) 넘겨받기 ( id, name, price )
+	id = request.getParameter("id");
+	name = request.getParameter("name");
+	price = Integer.parseInt(request.getParameter("price"));
+	// 2. 세션의 cart 속성을 얻어온다.
+	Object obj = session.getAttribute("cart");
+	// 3. 만일 null이면 ArrayList 객체 새로 생성하고 그렇지 않으면 ArrayList 변수(glist)에 지정
+	if(obj == null){ // 아직 구매하기를 누른항목이 없으므로 새로운 리스트 만들어줌
+		glist = new ArrayList<Goods>();
+	}else{
+		glist = (ArrayList<Goods>)obj;  // glist를 ArrayList로 만들어준것????
+	}
+	// 4. 1번의 값들을 Goods 객체로 생성후 ArrayList 에 추가
+	Goods good = new Goods(id,name,price);
+	glist.add(good);   // arraylist에 객체가 들어간것.
+	// 5. 세션에 cart 라는 이름에 Arrist를 저장
+	session.setAttribute("cart",glist);
+
+
+%>		 
+
+<html>
+<body bgcolor=white>
+<%= name %> 을 구입하셨습니다.
+
+<br><br><br>
+
+<table>
+<tr bgcolor="#e7a068"><th>상품명</th>
+<th>가격</th></tr>
+
+<%
+		int n = glist.size();
+		int sum = 0;
+		for(int i=0; i < n; i++) {
+			Goods goods = (Goods) glist.get(i);
+			int gp = goods.getPrice();
+			sum += gp;
+%>
+			<tr><td align="center"> <%= goods.getName() %> </td>
+				<td align="right"> <%= gp %> </td></tr>
+<%
+		} 		 
+%>
+
+<tr bgcolor="#e7a068"><td colspan="2" align="right"> 총액 : <%= sum  %></td></tr>
+</table>
+
+<br/><br/>
+[<a href="wshop.jsp">쇼핑하러 가기</a>]
+[<a href="Buy.jsp">구입하기</a>]
+
+</body>
+</html>
+```
+
+<br>
+
+* Buy.jsp
+
+```javascript
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ page import="shop.cart.Goods" %>
+<%@ page import="java.util.*" %>
+
+<%
+	ArrayList<Goods> glist = null;
+
+	request.setCharacterEncoding("utf-8");
+
+	// 1. 세션에서 지정한 cart 속성값을 얻어와서 ArrayList 변수에 지정
+	Object obj = session.getAttribute("cart");
+	if(obj==null){
+		return;
+	}else{
+		glist=(ArrayList<Goods>)obj;
+		session.removeAttribute("cart");
+	}
+	// 2. null 이면 리턴 그렇지 않으면 세션값 얻어오기
+	// 3. 세션에서 속성을 제거한다
+
+
+%>		 
+
+<html>		
+<body bgcolor="white">
+<table>
+<tr bgcolor="#e7a068"><th>상품명</th>
+<th>가격</th></tr>
+
+<%
+		int sum = 0;
+		int n = glist.size();
+
+		for(int i=0; i < n; i++) {
+			Goods goods = (Goods) glist.get(i);
+			int gp = goods.getPrice();
+			sum += gp;
+
+%>
+			<tr><td align="center"> <%= goods.getName() %></td>
+				<td align="right"><%= gp %></td>
+			</tr>
+<%
+		} 	
+%>
+<tr bgcolor="#e7a068"><td colspan="2" align="right"> 총액 :  <%= sum %> </td></tr>
+</table>
+
+<br><br><a href="wshop.jsp">다시 쇼핑하기</a>
+</body></html>
 
 ```
