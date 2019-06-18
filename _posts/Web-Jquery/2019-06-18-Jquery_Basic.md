@@ -17,7 +17,7 @@ tags: [Web,Javascript,Jquery]
 
 > Jquery도 자바스크립트 기반 문법이기 때문에 스트립트 태그에 기술한다 <br>
 > Jquery를 사용하기 위해  <br>
-> # => 아이디, . => 클래스
+> '#' => 아이디, . => 클래스
 
 <br>
 
