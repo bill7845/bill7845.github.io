@@ -17,7 +17,7 @@ tags: [Web,Javascript,Jsp]
 
 * 04_ajax_post_json.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -93,7 +93,7 @@ tags: [Web,Javascript,Jsp]
 
 * 04_server.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 

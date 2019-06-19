@@ -20,7 +20,7 @@ tags: [Web,Javascript,Jsp]
 
 * 01_ajax_get_csv.jsp   // get방식 csv 데이터
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ tags: [Web,Javascript,Jsp]
 
 * 01_server.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -91,7 +91,7 @@ tags: [Web,Javascript,Jsp]
 
 * 02_ajax_post_csv.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -140,7 +140,7 @@ tags: [Web,Javascript,Jsp]
 
 * 02_server.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -161,7 +161,7 @@ tags: [Web,Javascript,Jsp]
 
 * 04_ajax_post_json.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -215,7 +215,7 @@ tags: [Web,Javascript,Jsp]
 
 * 04_server.jsp
 
-```html
+```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
