@@ -14,3 +14,4 @@ tags: [Statistics,JupyterNotebook,Pandas,Numpy]
 ### 1. pandas로 데이터 가져오기
 
 ![png](output_64_4.png)
+asdfasdf
