@@ -335,11 +335,11 @@ tags: [Web,Javascript,Jsp]
 	if(obj==null){
 		return;
 	}else{
+    // 2. null 이면 리턴 그렇지 않으면 세션값 얻어오기
 		glist=(ArrayList<Goods>)obj;
+    // 3. 세션에서 속성을 제거한다
 		session.removeAttribute("cart");
 	}
-	// 2. null 이면 리턴 그렇지 않으면 세션값 얻어오기
-	// 3. 세션에서 속성을 제거한다
 
 
 %>		 
